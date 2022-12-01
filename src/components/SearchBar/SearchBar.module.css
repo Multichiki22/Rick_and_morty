@@ -1,0 +1,13 @@
+.boton{
+    color: #000;
+    margin: auto;
+    height: 20px;
+    width: fit-content;
+    background-color: rgb(37, 255, 45); opacity: 1;
+    border-radius: 5px;
+    border: 2px solid rgb(37, 255, 45);
+}.boton:hover{
+    font-weight: bolder;
+    background-color: rgb(37, 255, 45); opacity: 1;
+    box-shadow: 0 0 20px rgb(60, 239, 66);
+}
