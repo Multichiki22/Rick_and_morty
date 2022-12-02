@@ -1,10 +1,16 @@
-import styles from "./SearchBar.module.css"
+import styles from "./SearchBar.module.css";
+
+
 
 export default function SearchBar(props) {
-   return (
-      <div>
-      <input type='search'/>
-      <button className={styles.boton} onClick={props.onSearch}>Agregar</button> 
-      </div>
-   );
+   let id = ""
+   
+  return (
+    <div>
+      <input type="search" onChange={(evento)=>(id = evento.target.value)}/>
+      <button className={styles.boton} onClick={()=>{props.onSearch(id)}}>
+        Agregar
+      </button>
+    </div>
+  );
 }
