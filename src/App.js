@@ -3,15 +3,12 @@ import Cards from "./components/Cards/Cards.jsx";
 import NavBar from "./components/NavBar/NavBar";
 import React, { useState } from "react";
 
-const example = {
-  name: "Morty Smith",
-  species: "Human",
-  gender: "Male",
-  image: "https://rickandmortyapi.com/api/character/avatar/2.jpeg",
-};
-
 function App() {
   const [characters, setCharacters] = useState([]);
+
+  const eliminar = (idPersonaje)=>{
+    setCharacters(characters.filter(personaje => personaje.id != idPersonaje))
+  }
 
   function busqueda(nombre) {
     fetch(`https://rickandmortyapi.com/api/character/${nombre}`)
@@ -19,7 +16,6 @@ function App() {
       .then((data) => {
         if (data.name) {
           setCharacters((oldChars) => [...oldChars, data]);
-          console.log(characters);
         } else {
           window.alert("No hay personajes con ese ID");
         }
@@ -35,7 +31,7 @@ function App() {
       <div className="App" style={{ padding: "25px" }}>
         <NavBar onSearch={onSearch} />
         <div>
-          <Cards characters={characters} />
+          <Cards characters={characters} eliminar={eliminar} />
         </div>
       </div>
     </>
