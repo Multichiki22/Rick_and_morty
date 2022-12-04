@@ -1,6 +1,7 @@
 .div{
     /* background-color: aqua; */
     width: fit-content;
+    max-width: 300px;
     margin: 1px;
     display: grid;
     grid-template-rows: 15.5em 3.2em 3em;
@@ -19,7 +20,7 @@
     display: grid;
     align-content: center;
     background-color: rgb(54, 50, 93);
-    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-columns: 40% 20% 40%;
 }.species{
     color: rgb(39, 158, 43);
     display: flex;
@@ -48,6 +49,7 @@
     width: 60%;
     background-color: rgb(255, 255, 255);
     border-radius: 10px 10px 0 0;
+    text-align: center;
     border: 2px solid black;
 }.boton:hover{
     font-weight: bolder;

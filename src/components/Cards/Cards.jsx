@@ -11,7 +11,6 @@ export default function Cards(props) {
           {<Card personaje={personaje} eliminar={eliminar} />}
         </div>
       ))}
-      {console.log(characters)}
     </div>
   );
 }
