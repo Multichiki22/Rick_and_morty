@@ -2,7 +2,8 @@ import Card from "../Card/Card.jsx";
 import styles from "./Cards.module.css";
 
 export default function Cards(props) {
-  const { characters,eliminar } = props;
+  const { characters, eliminar } = props;
+
   return (
     <div className={styles.contenedor}>
       {characters.map((personaje) => (
@@ -10,6 +11,7 @@ export default function Cards(props) {
           {<Card personaje={personaje} eliminar={eliminar} />}
         </div>
       ))}
+      {console.log(characters)}
     </div>
   );
 }
