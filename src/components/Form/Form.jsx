@@ -1,6 +1,7 @@
 import { useState } from "react";
 import { validate } from "./Validations";
-export default function Form() {
+export default function Form(props) {
+  const {login} = props
   const [UserData, setUserData] = useState({
     user: "",
     password: "",
@@ -19,8 +20,8 @@ export default function Form() {
 
   const handleSubmit = function (evento) {
     evento.preventDefault();
-    if (Object.values(errors).length == 0) {
-      alert("Datos completos");
+    if (Object.values(errors).length === 0) {
+      login(UserData);
       setUserData({
         user: "",
         password: "",

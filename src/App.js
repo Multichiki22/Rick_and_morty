@@ -1,18 +1,34 @@
 import "./App.css";
 import Cards from "./components/Cards/Cards.jsx";
 import NavBar from "./components/NavBar/NavBar";
-import React, { useState } from "react";
-import { Route, Routes, useLocation } from "react-router-dom";
+import React, { useState,useEffect } from "react";
+import { Route, Routes, useLocation, useNavigate, } from "react-router-dom";
 import About from "./components/About/About";
 import Detail from "./components/Detail/Detail";
 import Form from "./components/Form/Form";
 
 function App() {
   const [characters, setCharacters] = useState([]);
+  const [access, setAccess] = useState(true);
+  const navigate = useNavigate();
+  const username = "myguelangel12@gmail.com";
+  const password = "Nose*76";
+
+  function login(userData) {
+    if (userData.password === password && userData.user === username) {
+      setAccess(true);
+      navigate("/Home")
+    }else{
+      alert("Usuario o contraseña incorrecta")
+    }
+  };
+  useEffect(() => {
+    if(!access) navigate("/");
+  },[access,navigate]);
 
   const eliminar = (idPersonaje) => {
     setCharacters(
-      characters.filter((personaje) => personaje.id != idPersonaje)
+      characters.filter((personaje) => personaje.id !== idPersonaje)
     );
   };
 
@@ -45,7 +61,7 @@ function App() {
         />
         <Route exact path="/About" element={<About />} />
         <Route exact path="/Detail/:id" element={<Detail />} />
-        <Route exact path="/" element={<Form />} />
+        <Route exact path="/" element={<Form login={login}/>} />
       </Routes>
     </>
   );
