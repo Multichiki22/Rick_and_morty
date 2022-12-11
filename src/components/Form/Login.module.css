@@ -1,0 +1,92 @@
+.container {
+  font-size: 20px;
+  width: 100vw;
+  height: 100vh;
+  align-items: center;
+  justify-content: center;
+  display: flex;
+}
+@media (max-width: 500px) {
+  .form {
+    width: 100%;
+    margin-left: 20px;
+    margin-right: 20px;
+  }
+}
+@media (min-width: 500px) {
+  .form {
+    width: 50vw;
+  }
+}
+@media (min-width: 1000px) {
+  .form {
+    width: 40vw;
+  }
+}
+@media (min-width: 1400px) {
+  .form {
+    width: 30vw;
+    max-height: 1000px;
+  }
+}
+.form {
+  height: fit-content;
+  border-radius: 15px;
+  background: #36325d;
+  padding-left: 5vh;
+  padding-right: 5vh;
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: 10% repeat(3, 1fr) 10%;
+  grid-row-gap: 1%;
+  align-items: center;
+}
+.divusername {
+  height: fit-content;
+  width: 100%;
+  grid-area: 2 / 1 / 3 / 2;
+}
+.divpassword {
+  height: fit-content;
+  width: 100%;
+  grid-area: 3 / 1 / 4 / 2;
+}
+
+.inputs {
+  height: 5vh;
+  width: 100%;
+  background-color: rgb(5, 80, 8);
+  color: rgb(37, 255, 45);
+  font-size: calc(0.5em + 1vw);
+  border: 3px solid black;
+  border-radius: 20px;
+}
+
+.login {
+  height: 100%;
+
+  max-height: 50px;
+  text-align: center;
+  grid-area: 4 / 1 / 5 / 2;
+  background-color: rgb(37, 255, 45);
+  opacity: 0.6;
+  border-radius: 5px;
+  border: 2px solid rgb(37, 255, 45);
+  font-size: calc(0.5em + 1vh);
+}
+.login:hover {
+  font-weight: bolder;
+  background-color: rgb(37, 255, 45);
+  opacity: 1;
+  box-shadow: 0 0 20px rgb(60, 239, 66);
+}
+.inputs::placeholder {
+  color: rgb(188, 222, 233);
+  text-align: center;
+}
+.danger {
+  font-size: calc(0.4em + 1vw);
+  display: flex;
+  flex-wrap: wrap;
+  color: red;
+}

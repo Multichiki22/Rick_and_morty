@@ -5,11 +5,11 @@ import React, { useState,useEffect } from "react";
 import { Route, Routes, useLocation, useNavigate, } from "react-router-dom";
 import About from "./components/About/About";
 import Detail from "./components/Detail/Detail";
-import Form from "./components/Form/Form";
+import Login from "./components/Form/Login";
 
 function App() {
   const [characters, setCharacters] = useState([]);
-  const [access, setAccess] = useState(true);
+  const [access, setAccess] = useState(false);
   const navigate = useNavigate();
   const username = "myguelangel12@gmail.com";
   const password = "Nose*76";
@@ -61,7 +61,7 @@ function App() {
         />
         <Route exact path="/About" element={<About />} />
         <Route exact path="/Detail/:id" element={<Detail />} />
-        <Route exact path="/" element={<Form login={login}/>} />
+        <Route exact path="/" element={<Login login={login}/>} />
       </Routes>
     </>
   );
