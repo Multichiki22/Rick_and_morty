@@ -1,5 +1,6 @@
 import { useState, useEffect } from "react";
 import { useParams } from "react-router-dom";
+import style from "./Detail.module.css";
 
 export default function Detail() {
   const { id } = useParams();
@@ -24,13 +25,32 @@ export default function Detail() {
   const origin = { ...character.origin };
   return (
     <>
-      <div>
-        <h2>{character.name}</h2>
-        <h3>{character.status}</h3>
-        <h3>{character.species}</h3>
-        <h3>{character.gender}</h3>
-        <h3>{origin.name}</h3>
-        <img src={character.image} alt=""/>
+      <div className={style.container}>
+        <div className={style.info}>
+          <div className={style.divPair}>
+            <h2 className={style.object}>Nombre:</h2>
+            <h2 className={style.value}>{character.name}</h2>
+          </div>
+          <div className={style.divPair}>
+            <h3 className={style.object}>Estatus:</h3>
+            <h3 className={style.value}>{character.status}</h3>
+          </div>
+          <div className={style.divPair}>
+            <h3 className={style.object}>Especie:</h3>
+            <h3 className={style.value}>{character.species}</h3>
+          </div>
+          <div className={style.divPair}>
+            <h3 className={style.object}>Genero:</h3>
+            <h3 className={style.value}>{character.gender}</h3>
+          </div>
+          <div className={style.divPair}>
+            <h3 className={style.object}>Origen:</h3>
+            <h3 className={style.value}>{origin.name}</h3>
+          </div>
+        </div>
+        <div className={style.imagen}>
+          <img src={character.image} alt="" />
+        </div>
       </div>
     </>
   );
