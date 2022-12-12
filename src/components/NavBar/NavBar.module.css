@@ -12,13 +12,12 @@
   grid-template-columns: repeat(4, 1fr);
   grid-template-rows: repeat(2, 1fr);
   grid-column-gap: 20px;
-  grid-row-gap: 20px;
+  grid-row-gap: 15px;
 }
 .searchBar {
-  display: flex;
   grid-area: 1 / 1 / 2 / 5;
-  justify-content: center;
-  align-items: center;
+  display: flex;
+  align-items: flex-end;
 }
 .addRandom {
   font-size: calc(0.3em + .5vw);
