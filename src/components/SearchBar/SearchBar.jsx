@@ -12,6 +12,7 @@ export default function SearchBar(props) {
       <input
         type="search"
         value={input}
+        onKeyPress={(event)=>{if(event.key==="Enter"){click()}}}
         onChange={(evento) => setInput(evento.target.value)}
       />
       <button
