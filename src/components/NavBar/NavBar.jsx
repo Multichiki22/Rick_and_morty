@@ -5,6 +5,12 @@ import RyM_Logo from "../../Images/RyM_Logo5.png";
 import Foto from "../../Images/Imagen1.png";
 
 export default function NavBar(props) {
+  const agregarRandom =()=>{
+    const min = Math.ceil(826);
+    const max = Math.floor(1);
+    const id_random = Math.floor(Math.random() * (max - min + 1) + min);
+    props.onSearch(id_random)
+  }
   return (
     <nav className={styles.nav}>
       <div className={styles.aboutMe}>
@@ -32,7 +38,7 @@ export default function NavBar(props) {
         <div className={styles.searchBar}>
           <SearchBar onSearch={props.onSearch} />
         </div>
-        <button className={styles.addRandom}>Añadir Random</button>
+        <button className={styles.addRandom} onClick={agregarRandom}>Añadir Random</button>
         <button className={styles.addAll}>Añadir Todas</button>
       </div>
     </nav>
