@@ -2,7 +2,7 @@ import styles from "./NavBar.module.css";
 import SearchBar from "../SearchBar/SearchBar";
 import { Link } from "react-router-dom";
 import RyM_Logo from "../../Images/RyM_Logo5.png";
-import Foto from "../../Images/Imagen1.png";
+import Foto from "../../Images/about/Imagen1.png";
 
 export default function NavBar(props) {
   const agregarRandom =()=>{

@@ -1,0 +1,61 @@
+
+.container{
+    display: flex;
+    justify-content: center;
+}
+.containerBox {
+  margin: 5%;
+  max-width: 18em;
+  background-color: rgb(194, 255, 249);
+  border-radius: 2em;
+  overflow: hidden;
+  font-size: 18px;
+}
+.divFoto {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+.foto {
+  padding: 5% 5% 0 5%;
+  width: 90%;
+  max-width: 16em;
+}
+.logo {
+  aspect-ratio: 1;
+  height: 1.2em;
+}
+.allTextContainer {
+  text-align: center;
+}
+
+.links {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  gap: 2%;
+}
+.name {
+  font-size: 1em;
+}
+.title {
+  font-size: 0.8em;
+}
+.description {
+  padding: 0 1.5em;
+  font-size: 0.475em;
+}
+.invitation {
+ font-size: 1em;
+}
+
+@media screen and (min-width: 425px) and (orientation: portrait) {
+    .containerBox {
+      font-size: 25px;
+    }
+  }
+@media screen and (min-width: 768px) {
+    .containerBox {
+      font-size: 40px;
+    }
+  }
