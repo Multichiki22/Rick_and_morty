@@ -14,14 +14,11 @@ export default function NavBar(props) {
   return (
     <nav className={styles.nav}>
       <div className={styles.aboutMe}>
-        <div className={styles.divFoto}>
-          <Link to="/about" > 
+          <Link to="/about" className={styles.divFoto}> 
             <img src={Foto} alt="Foto aqui" className={styles.foto} />
           </Link>
-        </div>
-
         <div className={styles.texto}>
-          <p className={styles.creado}>Creador:</p>
+          <p className={styles.creador}>Creador:</p>
           <Link to="/about" className={styles.link}>
             <p className={styles.yo}>Miguel Angel Gallego</p>
           </Link>
@@ -29,7 +26,7 @@ export default function NavBar(props) {
       </div>
 
       <div className={styles.divlogo}>
-        <Link to="/home">
+        <Link to="/home" className={styles.logo}>
           <img src={RyM_Logo} alt="Logo rick y morty" className={styles.logo} />
         </Link>
       </div>
@@ -39,7 +36,6 @@ export default function NavBar(props) {
           <SearchBar onSearch={props.onSearch} />
         </div>
         <button className={styles.addRandom} onClick={agregarRandom}>Añadir Random</button>
-        <button className={styles.addAll}>Añadir Todas</button>
       </div>
     </nav>
   );
