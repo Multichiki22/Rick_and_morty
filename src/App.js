@@ -11,16 +11,10 @@ function App() {
   const [characters, setCharacters] = useState([]);
   const [access, setAccess] = useState(false);
   const navigate = useNavigate();
-  const username = "myguelangel12@gmail.com";
-  const password = "Nose*76";
 
   function login(userData) {
-    if (userData.password === password && userData.user === username) {
       setAccess(true);
       navigate("/Home")
-    }else{
-      alert("Usuario o contraseña incorrecta")
-    }
   };
   useEffect(() => {
     if(!access) navigate("/");
@@ -39,7 +33,7 @@ function App() {
         if (data.name) {
           setCharacters((oldChars) => [...oldChars, data]);
         } else {
-          window.alert("No hay personajes con ese ID");
+          window.alert("No existe personaje con ese ID");
         }
       });
   }

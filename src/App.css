@@ -1,8 +1,5 @@
 
-@font-face {
-   font-family: "Shlop";
-   src: local("Shlop"), url(./fonts/shlop-rg.woff), format("woff");
-}.existe{
+.existe{
    display: block;
 }.noexiste{
    display: none;

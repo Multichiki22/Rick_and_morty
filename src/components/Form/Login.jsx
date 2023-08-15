@@ -1,6 +1,8 @@
 import { useState } from "react";
 import { validate } from "./Validations";
 import styles from "./Login.module.css";
+import logo from "../../Images/RyM_Logo5.png";
+
 export default function Form(props) {
   const { login } = props;
   const [UserData, setUserData] = useState({
@@ -16,7 +18,10 @@ export default function Form(props) {
     const key = event.target.name;
     const value = event.target.value;
     setUserData({ ...UserData, [key]: value });
-    setErrors(validate({ ...UserData, [key]: value }));
+    if (event) {
+      console.log(event);
+      setErrors(validate({ ...UserData, [key]: value }));
+    }
   };
 
   const handleSubmit = function (evento) {
@@ -40,8 +45,11 @@ export default function Form(props) {
     <>
       <div className={styles.container}>
         <form onSubmit={handleSubmit} className={styles.form}>
+          <img src={logo} alt="Rick and Morty logo" className={styles.logo} />
           <div className={styles.divusername}>
+            <h4 className={styles.guides}>Create your user:</h4>
             <input
+              autocomplete="off"
               className={styles.inputs}
               placeholder="Username"
               name="user"
@@ -52,7 +60,9 @@ export default function Form(props) {
             <p className={styles.danger}>{errors.user}</p>
           </div>
           <div className={styles.divpassword}>
+            <h4 className={styles.guides}>Create your password:</h4>
             <input
+              autocomplete="off"
               className={styles.inputs}
               placeholder="Password"
               name="password"

@@ -19,6 +19,8 @@
 }
 .searchBar {
   grid-area: 1 / 1 / 2 / 5;
+  display: flex;
+  align-items: flex-end;
 }
 .addRandom {
   min-width: 100%;
