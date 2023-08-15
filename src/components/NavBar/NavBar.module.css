@@ -5,7 +5,7 @@
   display: grid;
   grid-template-columns: 1% 24% 50% 24% 1%;
   grid-template-rows: 8em;
-  font-size: 5px;
+  font-size: 8px;
 }
 .controles {
   max-height: 100%;
@@ -103,12 +103,12 @@
 
 @media (min-width: 426px) {
   .nav {
-    font-size: 10px;
+    font-size: 12px;
   }
 }
 @media (min-width: 768px) {
   .nav {
-    font-size: 12px;
+    font-size: 14px;
   }
   .aboutMe {
     flex-direction: row;
