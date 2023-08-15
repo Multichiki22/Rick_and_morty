@@ -4,3 +4,12 @@
 }.noexiste{
    display: none;
 }
+.app{
+   background-image: url("https://fondosanimados.com/wp-content/uploads/2023/04/rick-2.jpg");
+   min-height: 100vh;
+   min-width: 100vw;
+   height: 100%;
+   background-repeat: no-repeat;
+   background-attachment: fixed;
+   object-fit: contain;
+}

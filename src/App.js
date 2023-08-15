@@ -12,6 +12,7 @@ function App() {
   const [access, setAccess] = useState(false);
   const navigate = useNavigate();
 
+
   function login(userData) {
       setAccess(true);
       navigate("/Home")
@@ -43,7 +44,7 @@ function App() {
   };
 
   return (
-    <>
+    <div className="app">
       <div className={useLocation().pathname === "/" ? "noexiste" : "existe"}>
         <NavBar path="/" onSearch={onSearch} />
       </div>
@@ -57,7 +58,7 @@ function App() {
         <Route exact path="/Detail/:id" element={<Detail />} />
         <Route exact path="/" element={<Login login={login}/>} />
       </Routes>
-    </>
+    </div>
   );
 }
 
