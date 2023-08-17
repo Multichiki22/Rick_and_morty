@@ -1,0 +1,9 @@
+version: "3.8"
+
+services:
+  app:
+    container_name: rick_y_morty
+    image: rick_y_morty
+    build:
+      context: .
+      target: production
