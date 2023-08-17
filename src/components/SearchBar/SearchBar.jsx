@@ -4,15 +4,21 @@ import React, { useState } from "react";
 export default function SearchBar(props) {
   const [input, setInput] = useState("");
   const click = () => {
-    setInput("");
-    props.onSearch(input);
+    if (input > 0 && input <= 826) {
+      setInput("");
+      props.onSearch(input);
+    }else {
+      alert("Select a number between 1 and 826")
+    }
   };
   return (
     <div className={styles.container}>
       <input
         placeholder="ID"
         className={styles.input}
-        type="search"
+        type="number"
+        min="1"
+        max="829"
         value={input}
         onKeyPress={(event) => {
           if (event.key === "Enter") {

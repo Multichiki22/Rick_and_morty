@@ -27,8 +27,8 @@ function App() {
     );
   };
 
-  function busqueda(nombre) {
-    fetch(`https://rickandmortyapi.com/api/character/${nombre}`)
+  function busqueda(characte_id) {
+    fetch(`https://rickandmortyapi.com/api/character/${characte_id}`)
       .then((response) => response.json())
       .then((data) => {
         if (data.name) {
