@@ -7,7 +7,7 @@ It is a web application which shows the contents of the rick and morty database 
 In the current state this page can show 829 characters the rich and morty public API together with their corresponding data
 
 ## What does the page look like?
-<a href="http://52.72.187.107/rick_y_morty/"><b>Look at the app rigth here</b></a>
+<a href="http://52.72.187.107/rick_y_morty/" target="blank"><b>Look at the app rigth here</b></a>
  
 __Currently this page doesnt have a domain or ssl certificate but is completly functional__
 
