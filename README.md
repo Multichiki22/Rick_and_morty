@@ -32,5 +32,7 @@ For this project the following technologies were used:
 - Html
 - CSS
 - AWS (EC2)
-- nginx
+- Docker
+- Linux
+- nginx (web server)
 - p2m
